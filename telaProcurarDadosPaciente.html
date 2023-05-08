@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Importações CSS -->
+        <link rel="stylesheet" type="text/css" href="EstiloApp.css" media="screen" />
+
+        <!-- Importações JS -->
+        <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+        <script type="text/javascript" src="JavaScript/plotarDadosPacientes.js"></script>
+        <script type="text/javascript" src="JavaScript/configFirebase.js"></script>
+        <script type="text/javascript" src="JavaScript/menuLateral.js"></script>
+    </head>
+
+    <body onload="carregarPacientes()">
+        <header>
+            <input type="checkbox" id="chec" class="botaoAbrirMenuLateral" onclick="abrirMenuLateral()">
+            <label for="chec">
+                <img src="https://img.icons8.com/ios-filled/50/000000/menu--v5.png" align="left">
+            </label>
+            <h1 id="tituloHeader">Diário Psiquiátrico</h1>
+        </header>
+
+        <nav id="Menu">
+            <a class="linkMenuLateral" onclick="fecharMenuLateral()"><b>&times; Fechar</b></a>
+            <hr>
+            <a class="linkMenuLateral" href="telaCadastroPaciente.html">Cadastrar Paciente</a>
+            <hr>
+            <a class="linkMenuLateral" onclick="sair()" >Sair</a>
+        </nav>
+
+        <main>
+            <br>
+            <br>
+            <h2 id="tituloPagina">Selecione o paciente para ver as estatísticas</h2>
+            <br>
+            <br>
+            <br>
+        </main>
+    </body>
+</html>

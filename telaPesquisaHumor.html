@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="EstiloApp.css" media="screen">
+
+        <!-- Importações CSS -->
+        <link rel="stylesheet" type="text/css" href="EstiloApp.css" media="screen" />
+
+        <!-- Importações JS -->
+        <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+        <script type="text/javascript" src="JavaScript/salvarDadosQuestionario.js"></script>
+        <script type="text/javascript" src="JavaScript/configFirebase.js"></script>
+    
+        <title>telaPesquisaHumor</title>
+    </head>
+
+    <body>
+        <header>
+            <h1 id="tituloHeader">Diário Psiquiátrico</h1>
+        </header>
+
+        <main>
+            <br>
+            <br>
+            <h2 id="tituloPagina">Questionário de Humor:</h2>
+            <br>
+            <br>
+            <br>
+            <h3 id="subtituloPagina">Diga como está seu humor hoje:</h3>
+            <br>
+            <br>
+            <br>
+            <form>
+                <input class="radioButton" type="radio" id="7" name="emocional">
+                <label for="euforico" class="textRadioButton">Euforico</label>
+                <br>
+                <br>
+                <input class="radioButton" type="radio" id="6" name="emocional">
+                <label for="agressivo" class="textRadioButton">Agressivo</label>
+                <br>
+                <br>
+                <input class="radioButton" type="radio" id="5" name="emocional">
+                <label for="irritado" class="textRadioButton">Irritado</label>
+                <br>
+                <br>
+                <input class="radioButton" type="radio" id="4" name="emocional">
+                <label for="muitoTriste" class="textRadioButton">Muito Triste</label>
+                <br>
+                <br>
+                <input class="radioButton" type="radio" id="3" name="emocional">
+                <label for="Triste" class="textRadioButton">Triste</label>
+                <br>
+                <br>
+                <input class="radioButton" type="radio" id="2" name="emocional">
+                <label for="normal" class="textRadioButton">Normal</label>
+                <br>
+                <br>
+                <input class="radioButton" type="radio" id="1" name="emocional">
+                <label for="apatico" class="textRadioButton">Apatico(Ausência de sentimento)</label>
+                <br>
+                <br>
+                <center>
+                    <a class="botaoGenerico" onclick="salvarPesquisaHumor()">Avançar</a>
+                </center>
+            </form>
+        </main>
+    </body>
+</html>
+

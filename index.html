@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+      <!-- Importações CSS -->
+      <link rel="stylesheet" type="text/css" href="EstiloApp.css" media="screen">
+      
+      <!-- Importações JS -->
+      <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+      <script type="text/javascript" src="JavaScript/configFirebase.js"></script>
+      <script type="text/javascript" src="JavaScript/loginIndex.js"></script>
+
+      <title>index</title>
+    </head>
+    <body class="backgroundIndex">
+      <main class="conteudoPaginaIndex">
+        <br>
+        <h1 id="tituloHeader">Diário Psiquiátrico</h1><br>
+        <br>     
+        <div class="telinha">
+          <form class="formLoginCadastro">
+            <img src="https://images.emojiterra.com/google/android-11/128px/2695.png" alt="Cobrinha"/>
+            <br>
+            <label class="inputTxt">E-mail:</label>
+            <input class="inputTextBox" type="text" id="email">
+            <br>
+            <br>
+            <label class="inputTxt">Senha:</label>
+            <input class="inputTextBox" type="password" id="senha">
+            <br>
+            <br>
+            <br>
+            <a class="botaoPaginaIndex" onclick="fazerLogin()">Login</a>
+            <br>
+            <br>
+          </form>
+        </div>
+      </main>
+    </body>
+  </html>

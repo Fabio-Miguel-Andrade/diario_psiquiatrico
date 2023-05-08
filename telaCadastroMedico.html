@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    
+    <!-- Importações CSS -->
+    <link rel="stylesheet" type="text/css" href="EstiloApp.css" media="screen" />
+
+    <!-- Importações JS -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+    <script type="text/javascript" src="JavaScript/configFirebase.js"></script>
+    <script type="text/javascript" src="JavaScript/cadastrarMedico.js"></script>
+    <script type="text/javascript" src="JavaScript/verificacaoDadosUser.js"></script>
+    <script type="text/javascript" src="JavaScript/salvarCPFCadastrado.js"></script>
+    <script type="text/javascript" src="JavaScript/menuLateral.js"></script>
+    
+    <title>telaCadastrarMédico</title>
+  </head>
+
+  <body onload="retornarCpfsCadastrados()">
+    <header>
+      <input type="checkbox" id="chec" class="botaoAbrirMenuLateral" onclick="abrirMenuLateral()">
+      <label for="chec">
+          <img src="https://img.icons8.com/ios-filled/50/000000/menu--v5.png" align="left">
+      </label>
+      <h1 id="tituloHeader">Diário Psiquiátrico</h1>
+    </header>
+
+    <nav id="Menu">
+      <a class="linkMenuLateral" onclick="fecharMenuLateral()"><b>&times; Fechar</b></a>
+      <hr>
+      <a class="linkMenuLateral" href="Login.html">Sair</a>
+    </nav>
+
+    <main>
+      <form class="formLoginCadastro">
+        <label>Nome do Médico:</label>
+        <input class="inputTextBox" id="nomeMedico" type="text" />
+        <br />
+        <br />
+        <label>CPF do Médico:</label>
+        <input class="inputTextBox" id="cpfMedico" type="text" />
+        <br />
+        <br />
+        <label>CRM do Médico:</label>
+        <input class="inputTextBox" id="crmMedico" type="text" />
+        <br />
+        <br />
+        <label>Email do Médico:</label>
+        <input class="inputTextBox" id="emailMedico" type="email" />
+        <br />
+        <br />
+        <label>Senha do Médico:</label>
+        <input class="inputTextBox" id="senhaMedico" type="password">
+        <br />
+        <br />
+        <label>Repita a Senha do Médico:</label>
+        <input class="inputTextBox" id="copiaSenhaMedico" type="password" />
+        <br />
+        <br />
+        <br />
+        <a class="botaoGenerico" type="button" onclick="cadastrarMedico();"><b>Avançar</b></a>
+        <br />
+      </form>
+    </main>
+  </body>
+</html>
